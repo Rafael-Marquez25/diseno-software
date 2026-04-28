@@ -1,7 +1,0 @@
-<map id="Admin::handleUserActions" name="Admin::handleUserActions">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,31"/>
-<area shape="rect" id="Node000002" href="$classViewAppointments.html#aa34cc84f2139aa83f8d987af3c6e473c" title="Método de ejecución del comando." alt="" coords="248,5,452,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,15,235,15,235,21,200,21"/>
-<area shape="rect" id="Node000003" href="$classSystem.html#a68c71c4cea74c9fb9b78b76383617097" title="Muestra las citas del sistema." alt="" coords="500,5,704,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,15,486,15,486,21,452,21"/>
-</map>

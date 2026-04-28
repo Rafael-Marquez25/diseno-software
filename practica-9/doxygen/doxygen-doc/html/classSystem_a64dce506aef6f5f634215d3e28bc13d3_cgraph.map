@@ -1,9 +1,0 @@
-<map id="System::assignScheduleToMedic" name="System::assignScheduleToMedic">
-<area shape="rect" id="Node000001" title="Asigna un horario a un médico." alt="" coords="5,55,200,95"/>
-<area shape="rect" id="Node000002" href="$classSystem.html#aa6e30aadd4e7c06a101d59e4fce4dcb3" title="Muestra la lista de médicos registrados." alt="" coords="258,5,441,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,53,280,31,282,36,190,58"/>
-<area shape="rect" id="Node000003" href="$classSystem.html#a4e60cf5a8124304c49ecf18ec5e5f2e3" title="Actualiza el horario de un médico." alt="" coords="248,55,451,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,73,235,73,235,78,200,78"/>
-<area shape="rect" id="Node000004" href="$classSystem.html#ad8bd10640ec9275a50277de9a7b6147e" title="Verifica que un usuario sea médico." alt="" coords="272,120,427,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,93,282,114,280,120,189,98"/>
-</map>

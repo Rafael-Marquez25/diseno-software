@@ -1,7 +1,0 @@
-<map id="System::login" name="System::login">
-<area shape="rect" id="Node000001" title="Realiza el proceso de inicio de sesión." alt="" coords="5,5,116,31"/>
-<area shape="rect" id="Node000002" href="$classSystem.html#a4870759acb84e414eae83e78468d2fdd" title="Crea un usuario dinámicamente según su rol." alt="" coords="164,5,309,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,15,150,15,150,21,116,21"/>
-<area shape="rect" id="Node000003" href="$classPatient.html#aff8f87eee33acde4ad4de9ea49805a6d" title=" " alt="" coords="357,5,468,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,15,344,15,344,21,310,21"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="System::getTheSystem" name="System::getTheSystem">
-<area shape="rect" id="Node000001" title="Devuelve la instancia única del sistema." alt="" coords="5,5,179,31"/>
-<area shape="rect" id="Node000002" href="$classSystem.html#ae317936c9bcf1374d61745572e0f2f8a" title="Constructor protegido." alt="" coords="227,5,355,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,15,213,15,213,21,179,21"/>
-</map>
