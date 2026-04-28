@@ -1,5 +1,0 @@
-<map id="Robot" name="Robot">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,175,559"/>
-<area shape="rect" id="Node000002" href="$structPosition.html" title=" " alt="" coords="57,5,123,91"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,91,93,137,87,137,87,91"/>
-</map>
