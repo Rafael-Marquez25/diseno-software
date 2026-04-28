@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['offersupport_0',['offerSupport',['../classRobot.html#a5ee441443b20549c216d6fb5632f0b0b',1,'Robot']]],
+  ['opendb_1',['openDb',['../classSystem.html#a17da24473fade5ee31153e9e2a44b76d',1,'System']]],
+  ['operator_3c_3c_2',['operator&lt;&lt;',['../classRobot.html#ae4f060b6dec23fef87f537355cd2f7d1',1,'Robot::operator&lt;&lt;'],['../Robot_8cpp.html#af02d27c79de9ff3c8a11ea2feafcf9f9',1,'operator&lt;&lt;():&#160;Robot.cpp']]],
+  ['operator_3d_3',['operator=',['../classSystem.html#a1c2cb035d0f63fabe49c0af69238208f',1,'System']]]
+];

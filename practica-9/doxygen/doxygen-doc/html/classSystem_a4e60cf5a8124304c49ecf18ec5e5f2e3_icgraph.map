@@ -1,0 +1,7 @@
+<map id="System::updateScheduleForMedic" name="System::updateScheduleForMedic">
+<area shape="rect" id="Node000001" title="Actualiza el horario de un médico." alt="" coords="479,5,681,45"/>
+<area shape="rect" id="Node000002" href="$classSystem.html#a64dce506aef6f5f634215d3e28bc13d3" title="Asigna un horario a un médico." alt="" coords="236,5,431,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="465,28,431,28,431,23,465,23"/>
+<area shape="rect" id="Node000003" href="$classAssingSchedule.html#a29d0a9e58dd3d311babba6aa28e9be02" title="Método de ejecución del comando." alt="" coords="5,13,188,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,28,188,28,188,23,222,23"/>
+</map>

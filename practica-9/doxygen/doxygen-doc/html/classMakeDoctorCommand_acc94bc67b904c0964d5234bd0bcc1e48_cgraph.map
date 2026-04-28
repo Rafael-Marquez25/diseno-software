@@ -1,0 +1,11 @@
+<map id="MakeDoctorCommand::execute" name="MakeDoctorCommand::execute">
+<area shape="rect" id="Node000001" title="Método de ejecución del comando." alt="" coords="5,47,180,87"/>
+<area shape="rect" id="Node000002" href="$classSystem.html#abe446d671c493be39ccacead38ab1069" title="Asigna una especialidad a un médico." alt="" coords="228,29,387,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,54,214,50,214,56,181,60"/>
+<area shape="rect" id="Node000005" href="$classSystem.html#ab6af39b8be221a46dc837711f9e42680" title="Devuelve el puntero a la base de datos." alt="" coords="248,79,367,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="181,74,234,81,234,86,180,80"/>
+<area shape="rect" id="Node000003" href="$classSystem.html#aa6e30aadd4e7c06a101d59e4fce4dcb3" title="Muestra la lista de médicos registrados." alt="" coords="435,5,617,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,31,421,27,421,32,388,36"/>
+<area shape="rect" id="Node000004" href="$classSystem.html#ad8bd10640ec9275a50277de9a7b6147e" title="Verifica que un usuario sea médico." alt="" coords="449,55,603,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="388,49,436,54,435,60,387,54"/>
+</map>

@@ -1,0 +1,42 @@
+\doxysection{src/\+Robot.cpp File Reference}
+\hypertarget{Robot_8cpp}{}\label{Robot_8cpp}\index{src/Robot.cpp@{src/Robot.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include "{}Robot.\+h"{}}\newline
+Include dependency graph for Robot.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Robot_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{Robot_8cpp_af02d27c79de9ff3c8a11ea2feafcf9f9}{operator$<$$<$}} (std\+::ostream \&output, const \mbox{\hyperlink{classRobot}{Robot}} \&robot)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Robot_8cpp_af02d27c79de9ff3c8a11ea2feafcf9f9}\label{Robot_8cpp_af02d27c79de9ff3c8a11ea2feafcf9f9} 
+\index{Robot.cpp@{Robot.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Robot.cpp@{Robot.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{output,  }\item[{const \mbox{\hyperlink{classRobot}{Robot}} \&}]{robot }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{Robot_8cpp_source}{Robot.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Format\ [id\ -\/\ State\ -\/\ last\ activity]}}
+\DoxyCodeLine{00071\ \ \ \ \ output\ <<\ \textcolor{stringliteral}{"{}[Robot\ "{}}\ <<\ robot.\mbox{\hyperlink{classRobot_abda904fa7fc3b50bf8daaeb072e0a6b1}{getId}}()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ \textcolor{stringliteral}{"{}State:\ "{}}\ <<\ robot.\mbox{\hyperlink{classRobot_aac05de3f5871f1624d5a8c8860f20880}{getState}}()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ \textcolor{stringliteral}{"{}Last\ Activity:\ "{}}\ <<\ robot.\mbox{\hyperlink{classRobot_aa6bb3c1827c56019725ab5b802f18026}{getLastActivityTime}}()\ <<\ \textcolor{stringliteral}{"{}s]"{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ output;\ }
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}

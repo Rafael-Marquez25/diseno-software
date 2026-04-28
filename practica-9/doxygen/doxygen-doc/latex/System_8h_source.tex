@@ -1,0 +1,81 @@
+\doxysection{System.\+h}
+\hypertarget{System_8h_source}{}\label{System_8h_source}\index{src/System.h@{src/System.h}}
+\mbox{\hyperlink{System_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ SYSTEM\_H}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ SYSTEM\_H}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <sqlite3.h>}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Patient_8h}{Patient.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Medic_8h}{Medic.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Admin_8h}{Admin.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Robot_8h}{Robot.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CustomExceptions_8h}{CustomExceptions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00027}\mbox{\hyperlink{classSystem}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSystem}{System}}}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00029}00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00035}\mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{00035}}\ \ \ \ \ std::queue<Robot*>\ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00042}\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{00042}}\ \ \ \ \ sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00047}\mbox{\hyperlink{classSystem_a6ee8a10d93cb9353f5a09ce9f172b2c4}{00047}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classSystem}{System}}*\ \mbox{\hyperlink{classSystem_a6ee8a10d93cb9353f5a09ce9f172b2c4}{singleSystem}};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00049}00049\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00056}\mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{00056}}\ \ \ \ \ \mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{System}}()\{\};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00058}00058\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classSystem}{System}}*\ \mbox{\hyperlink{classSystem_ad82d69dc75eb33ccd12dc8aa055ca7f8}{getTheSystem}}();}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<User>\ \mbox{\hyperlink{classSystem_a4870759acb84e414eae83e78468d2fdd}{makeUser}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ role,}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ password,}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ username,}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ specialty);}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00093}00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{addRobot}}(\mbox{\hyperlink{classRobot}{Robot}}\&\ robot);}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00100}00100\ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}*\ \mbox{\hyperlink{classSystem_a439c4e863aa2feeb2e4ef13b6d77bc01}{getRobotFront}}();}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_aa298df5f8a8fafba9c1556d7bcb52ac3}{printAvailableRobots}}();}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00114}00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_ab8fd79d8d49644a5dc755879e071f371}{accompany}}(\textcolor{keywordtype}{int}\ time);}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00128}00128\ \ \ \ \ std::unique\_ptr<User>\ \mbox{\hyperlink{classSystem_af6dde572eff39a551c4f897de7fbd8ee}{login}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00135}00135\ \ \ \ \ sqlite3*\ \mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{getDb}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_af332bfab149fa2f2582004da3cf2af01}{registerNewUser}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00156}00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a17da24473fade5ee31153e9e2a44b76d}{openDb}}();}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00163}\mbox{\hyperlink{classSystem_a1b9aa2587b92ee622684e39ae664976f}{00163}}\ \ \ \ \ \mbox{\hyperlink{classSystem_a1b9aa2587b92ee622684e39ae664976f}{System}}\ (\mbox{\hyperlink{classSystem}{System}}\ \&otherSystem)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00170}\mbox{\hyperlink{classSystem_a1c2cb035d0f63fabe49c0af69238208f}{00170}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a1c2cb035d0f63fabe49c0af69238208f}{operator=\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSystem}{System}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00177}00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_aa6e30aadd4e7c06a101d59e4fce4dcb3}{showMedicsList}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00184}00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_abe446d671c493be39ccacead38ab1069}{createMedic}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00192}00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a64dce506aef6f5f634215d3e28bc13d3}{assignScheduleToMedic}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00202}00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a4e60cf5a8124304c49ecf18ec5e5f2e3}{updateScheduleForMedic}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}},}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ medicId,}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ start,}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ end);}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00215}00215\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSystem_ad8bd10640ec9275a50277de9a7b6147e}{verifyMedic}}(sqlite3*\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}},\ \textcolor{keywordtype}{int}\ medicId);}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00222}00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a68c71c4cea74c9fb9b78b76383617097}{showAppointments}}();}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00229}00229\ \ \ \ \ \mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{\string~System}}();}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00230}00230\ \};}
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{System_8h_source_l00232}00232\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,13 @@
+<map id="Admin::verifyMedic" name="Admin::verifyMedic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="573,31,721,56"/>
+<area shape="rect" id="Node000002" href="$classAdmin.html#a02bd151d3bba163f64be5b41f54bf82e" title=" " alt="" coords="299,5,525,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,37,525,33,526,28,560,31"/>
+<area shape="rect" id="Node000005" href="$classAdmin.html#ac7a63bc5d0d73c4eeafeb9a256505585" title=" " alt="" coords="336,55,488,80"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="560,55,488,62,488,57,559,50"/>
+<area shape="rect" id="Node000003" href="$classAdmin.html#af8c9dc54006c2a161deec986311da112" title=" " alt="" coords="108,31,251,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,34,251,38,251,33,285,29"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="205,20,197,12,179,9,164,11,156,16,155,22,159,29,154,32,149,22,152,13,162,6,179,4,200,8,208,16"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,46,60,46,60,41,94,41"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="322,61,250,53,251,48,323,55"/>
+</map>

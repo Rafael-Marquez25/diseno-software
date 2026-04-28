@@ -1,0 +1,116 @@
+\doxysection{Assing\+Schedule Class Reference}
+\hypertarget{classAssingSchedule}{}\label{classAssingSchedule}\index{AssingSchedule@{AssingSchedule}}
+
+
+{\ttfamily \#include $<$Assing\+Schedule.\+h$>$}
+
+
+
+Inheritance diagram for Assing\+Schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classAssingSchedule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Assing\+Schedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classAssingSchedule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAssingSchedule_af1e44541936a59e8716dba08c38f0f3d}{Assing\+Schedule}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}sys)
+\item 
+void \mbox{\hyperlink{classAssingSchedule_a29d0a9e58dd3d311babba6aa28e9be02}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Método de ejecución del comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommand_a558d80e30a1557d6117c2af7a30a8b85}{Command}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}sys)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classCommand}{Command}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand_aa545a53d35818f9efb936daf3fa16c61}{\texorpdfstring{$\sim$}{\string~}\+Command}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{AssingSchedule_8h_source_l00004}{4}} of file \mbox{\hyperlink{AssingSchedule_8h_source}{Assing\+Schedule.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAssingSchedule_af1e44541936a59e8716dba08c38f0f3d}\label{classAssingSchedule_af1e44541936a59e8716dba08c38f0f3d} 
+\index{AssingSchedule@{AssingSchedule}!AssingSchedule@{AssingSchedule}}
+\index{AssingSchedule@{AssingSchedule}!AssingSchedule@{AssingSchedule}}
+\doxysubsubsection{\texorpdfstring{AssingSchedule()}{AssingSchedule()}}
+{\footnotesize\ttfamily Assing\+Schedule\+::\+Assing\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{AssingSchedule_8h_source_l00009}{9}} of file \mbox{\hyperlink{AssingSchedule_8h_source}{Assing\+Schedule.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ :\ \mbox{\hyperlink{classCommand}{Command}}\ (\ sys\ )\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAssingSchedule_a29d0a9e58dd3d311babba6aa28e9be02}\label{classAssingSchedule_a29d0a9e58dd3d311babba6aa28e9be02} 
+\index{AssingSchedule@{AssingSchedule}!execute@{execute}}
+\index{execute@{execute}!AssingSchedule@{AssingSchedule}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Assing\+Schedule\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método de ejecución del comando. 
+
+Este es el único método que el Invoker (\doxylink{classAdmin}{Admin}) necesita conocer. 
+
+Implements \mbox{\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}}.
+
+
+
+Definition at line \mbox{\hyperlink{AssingSchedule_8h_source_l00011}{11}} of file \mbox{\hyperlink{AssingSchedule_8h_source}{Assing\+Schedule.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}-\/>\mbox{\hyperlink{classSystem_a64dce506aef6f5f634215d3e28bc13d3}{assignScheduleToMedic}}(\mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}-\/>\mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{getDb}}());}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSystem_a64dce506aef6f5f634215d3e28bc13d3}{System\+::assign\+Schedule\+To\+Medic()}}, \mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{System\+::get\+Db()}}, and \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{Command\+::system}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAssingSchedule_a29d0a9e58dd3d311babba6aa28e9be02_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{AssingSchedule_8h}{Assing\+Schedule.\+h}}\end{DoxyCompactItemize}

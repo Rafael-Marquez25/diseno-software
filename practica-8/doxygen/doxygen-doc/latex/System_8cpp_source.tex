@@ -1,0 +1,183 @@
+\doxysection{System.\+cpp}
+\hypertarget{System_8cpp_source}{}\label{System_8cpp_source}\index{src/System.cpp@{src/System.cpp}}
+\mbox{\hyperlink{System_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{System_8h}{System.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00003}\mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{00003}}\ \mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{System::System}}()\{\ \textcolor{comment}{//\ pointer\ to\ the\ db}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00004}00004\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00006}\mbox{\hyperlink{classSystem_a17da24473fade5ee31153e9e2a44b76d}{00006}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a17da24473fade5ee31153e9e2a44b76d}{System::openDb}}()\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{keywordtype}{int}\ rc;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Abrir\ la\ base\ de\ datos}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00010}00010\ \ \ \ \ rc\ =\ sqlite3\_open(\textcolor{stringliteral}{"{}appointment\_system.db"{}},\ \&\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc)\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classDatabaseError}{DatabaseError}}(sqlite3\_errmsg(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}}));\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pragma\_sql\ =\ \textcolor{stringliteral}{"{}PRAGMA\ foreing\_keys\ =\ ON;"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=SQLITE\_OK)\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classDatabaseError}{DatabaseError}}(sqlite3\_errmsg(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}}));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00021}00021\ \ \ \ \ rc\ =\ sqlite3\_exec(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}},\ pragma\_sql,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00024}\mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{System::addRobot}}(\mbox{\hyperlink{classRobot}{Robot}}\ \&robot)\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.push(\&robot);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00028}\mbox{\hyperlink{classSystem_a8b8d4d7ef0410c71b710f2952d42beee}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_a8b8d4d7ef0410c71b710f2952d42beee}{System::delRobot}}(\mbox{\hyperlink{classRobot}{Robot}}\ \&robot)\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00032}\mbox{\hyperlink{classSystem_a439c4e863aa2feeb2e4ef13b6d77bc01}{00032}}\ \mbox{\hyperlink{classRobot}{Robot}}*\ \mbox{\hyperlink{classSystem_a439c4e863aa2feeb2e4ef13b6d77bc01}{System::getRobotFront}}()\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}No\ robots\ available"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.front();}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00039}\mbox{\hyperlink{classSystem_aa298df5f8a8fafba9c1556d7bcb52ac3}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_aa298df5f8a8fafba9c1556d7bcb52ac3}{System::printAvailableRobots}}()\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.front()-\/>getState()\ !=\ \textcolor{stringliteral}{"{}Libre"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}No\ robots\ available.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00045}00045\ \ \ \ \ std::queue<Robot*>\ temp\ =\ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}};\ \textcolor{comment}{//\ Copia}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{while}\ (!temp.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}*\ robot\ =\ temp.front();\ \ \textcolor{comment}{//\ Obtener\ el\ robot}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (robot-\/>\mbox{\hyperlink{classRobot_aac05de3f5871f1624d5a8c8860f20880}{getState}}()\ ==\ \textcolor{stringliteral}{"{}Libre"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ *robot\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ temp.pop();\ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00057}\mbox{\hyperlink{classSystem_ab8fd79d8d49644a5dc755879e071f371}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_ab8fd79d8d49644a5dc755879e071f371}{System::accompany}}(\textcolor{keywordtype}{int}\ time)\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.front()-\/>getState()\ ==\ \textcolor{stringliteral}{"{}Libre"{}})\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}*\ tempRobot\ =\ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.front();}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.pop();}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ tempRobot-\/>\mbox{\hyperlink{classRobot_a58b67cfa1b3e51d4f5c172782babe069}{dummy}}(time);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSystem_a5e4eb0dba71325cf6ed388d4d9ca3e7c}{robots}}.push(tempRobot);\}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00063}00063\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{else}\{std::cout\ <<\ \textcolor{stringliteral}{"{}There\ are\ no\ free\ robots,\ wait\ until\ one\ is\ available\ and\ select\ an\ option.\(\backslash\)n"{}};\}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00067}\mbox{\hyperlink{classSystem_af6dde572eff39a551c4f897de7fbd8ee}{00067}}\ std::unique\_ptr<User>\ \mbox{\hyperlink{classSystem_af6dde572eff39a551c4f897de7fbd8ee}{System::login}}(sqlite3*\ db)\{\ \textcolor{comment}{//\ login\ function}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00069}00069\ \ \ \ \ std::string\ usernameToVerify,\ passwordToVerify;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00071}00071\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Ingrese\ el\ username:\ "{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00072}00072\ \ \ \ \ std::cin\ >>\ usernameToVerify;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00074}00074\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Ingrese\ la\ contraseña:\ "{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00075}00075\ \ \ \ \ std::cin\ >>\ passwordToVerify;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ sql\ sentence}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sql\ =\ \textcolor{stringliteral}{"{}SELECT\ ID,\ USERNAME,\ PASSWORD,\ ROLE,\ SPECIALTY\ FROM\ USER\ WHERE\ username\ =\ ?\ AND\ password\ =\ ?;"{}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00079}00079\ \ \ \ \ sqlite3\_stmt*\ stmt;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{int}\ rc\ =\ sqlite3\_prepare\_v2(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}},\ sql,\ -\/1,\ \&stmt,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classDatabaseError}{DatabaseError}}(sqlite3\_errmsg(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}}));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ link\ the\ values}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00087}00087\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ usernameToVerify.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00088}00088\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 2,\ passwordToVerify.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00091}00091\ \ \ \ \ std::string\ username;\ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00092}00092\ \ \ \ \ std::string\ password;\ \ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00093}00093\ \ \ \ \ std::string\ role;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00094}00094\ \ \ \ \ std::string\ specialty;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{if}\ ((rc\ =\ sqlite3\_step(stmt))\ ==\ SQLITE\_ROW)\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ sqlite3\_column\_int(stmt,\ 0);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ username\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 1));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ password\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 2));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ role\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 3));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ specialty\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(sqlite3\_column\_text(stmt,\ 4));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (role\ ==\ \textcolor{stringliteral}{"{}Admin"{}})\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Admin>\ user\ =\ std::make\_unique<Admin>(\textcolor{keywordtype}{id},\ role,\ password,\ username);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Username\ y\ Contraseña\ Correctos.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(role\ ==\ \textcolor{stringliteral}{"{}Medic"{}})\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Medic>\ user\ =\ std::make\_unique<Medic>(\textcolor{keywordtype}{id},\ role,\ password,\ username,\ specialty);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Username\ y\ Contraseña\ Correctos.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(role\ ==\ \textcolor{stringliteral}{"{}Patient"{}})\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Patient>\ user\ =\ std::make\_unique<Patient>(\textcolor{keywordtype}{id},\ role,\ password,\ username);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Username\ y\ Contraseña\ Correctos.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00121}00121\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classInvalidCredentialsError}{InvalidCredentialsError}}();}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00125}00125\ \ \ \ \ sqlite3\_finalize(stmt);\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00127}00127\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00129}\mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{00129}}\ sqlite3*\ \mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{System::getDb}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00131}00131\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00133}\mbox{\hyperlink{classSystem_af332bfab149fa2f2582004da3cf2af01}{00133}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSystem_af332bfab149fa2f2582004da3cf2af01}{System::registerNewUser}}(sqlite3*\ db)\ \{\ \textcolor{comment}{//\ Function\ to\ register\ a\ new\ user,\ requires\ de\ bd}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00134}00134\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00135}00135\ \ \ \ \ std::string\ password;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00136}00136\ \ \ \ \ std::string\ role;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00137}00137\ \ \ \ \ std::string\ specialty\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00139}00139\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Introduce\ el\ usuario:\ "{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00140}00140\ \ \ \ \ std::cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00142}00142\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Introduce\ la\ contraseña:\ "{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00143}00143\ \ \ \ \ std::cin\ >>\ password;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00145}00145\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Introduce\ el\ tipo\ (Patient,\ Medic\ o\ Admin):\ "{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00146}00146\ \ \ \ \ std::cin\ >>\ role;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00148}00148\ \ \ \ \ \textcolor{comment}{//\ Sentencia\ preparada\ con\ parámetros}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00149}00149\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sql\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ USER\ (USERNAME,\ PASSWORD,\ ROLE,\ SPECIALTY)\ VALUES\ (?,\ ?,\ ?,\ ?);"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00150}00150\ \ \ \ \ sqlite3\_stmt*\ stmt;}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00152}00152\ \ \ \ \ \textcolor{keywordtype}{int}\ rc\ =\ sqlite3\_prepare\_v2(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}},\ sql,\ -\/1,\ \&stmt,\ NULL);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classDatabaseError}{DatabaseError}}(sqlite3\_errmsg(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}}));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00155}00155\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{comment}{//\ Enlazar\ los\ valores}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00158}00158\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ name.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00159}00159\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 2,\ password.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00160}00160\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 3,\ role.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00161}00161\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 4,\ specialty.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ Ejecutar}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00164}00164\ \ \ \ \ rc\ =\ sqlite3\_step(stmt);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00165}00165\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_DONE)\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classDatabaseError}{DatabaseError}}(sqlite3\_errmsg(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}}));}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00167}00167\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Datos\ insertados\ correctamente.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00171}00171\ \ \ \ \ \textcolor{comment}{//\ Liberar}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00172}00172\ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00173}00173\ \}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00175}\mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{00175}}\ \mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{System::\string~System}}()\{}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00176}00176\ \ \ \ \ sqlite3\_close(\mbox{\hyperlink{classSystem_a2470ff8cba8886557102da4fc48bb090}{db}});\ \textcolor{comment}{//\ close\ the\ db}}
+\DoxyCodeLine{\Hypertarget{System_8cpp_source_l00177}00177\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="Robot::dummy" name="Robot::dummy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="509,5,628,31"/>
+<area shape="rect" id="Node000002" href="$classSystem.html#ab8fd79d8d49644a5dc755879e071f371" title="Asigna un robot libre para acompañar." alt="" coords="307,5,461,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="496,21,461,21,461,15,496,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ac4a01fca5363d96c1bbbe907156cf0df" title=" " alt="" coords="108,5,259,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,21,259,21,259,15,293,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

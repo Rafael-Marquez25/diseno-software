@@ -1,0 +1,48 @@
+\doxysection{Appointment.\+cpp}
+\hypertarget{Appointment_8cpp_source}{}\label{Appointment_8cpp_source}\index{src/Appointment.cpp@{src/Appointment.cpp}}
+\mbox{\hyperlink{Appointment_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Appointment_8h}{Appointment.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00004}\mbox{\hyperlink{classAppointment_a63bed79841b5fc214cd0f97b269aa61d}{00004}}\ \mbox{\hyperlink{classAppointment_a63bed79841b5fc214cd0f97b269aa61d}{Appointment::Appointment}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ date,std::string\ patient,\ std::string\ medic,\ std::string\ location)\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{classAppointment_a622d99ad9a2d78f94373eb43047029d3}{id}};}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{classAppointment_a6e3428446f53b7d68c3138db43461595}{appointmentDate}}\ =\ date;}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00007}00007\ \ \ \ \ \mbox{\hyperlink{classAppointment_aaea6daa2bba2d5f3f3420d3c07516006}{associatedPatient}}\ =\ patient;}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{classAppointment_ad12efbb5dca4c47541e2dad25f6b291d}{associatedMedic}}\ =\ medic;}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{classAppointment_a2b44c866988353192f4b3e338790b5cf}{appoinmentLocation}}\ =\ location;}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00012}\mbox{\hyperlink{classAppointment_a62d585abcad3f24fd3102f2beba7f8c6}{00012}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAppointment_a62d585abcad3f24fd3102f2beba7f8c6}{Appointment::getId}}()\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00013}00013\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAppointment_a622d99ad9a2d78f94373eb43047029d3}{id}};}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00016}\mbox{\hyperlink{classAppointment_af9fb6905f8a56a95a85a93544f0f1f81}{00016}}\ std::string\ \mbox{\hyperlink{classAppointment_af9fb6905f8a56a95a85a93544f0f1f81}{Appointment::getDate}}()\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAppointment_a6e3428446f53b7d68c3138db43461595}{appointmentDate}};}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00020}\mbox{\hyperlink{classAppointment_af9fb9ceac17e7e317dbc5a33f87e0a4b}{00020}}\ std::string\ \mbox{\hyperlink{classAppointment_af9fb9ceac17e7e317dbc5a33f87e0a4b}{Appointment::getAssociatedPatient}}()\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAppointment_aaea6daa2bba2d5f3f3420d3c07516006}{associatedPatient}};}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00024}\mbox{\hyperlink{classAppointment_a83053c7ebf795fe8848a0756b026852f}{00024}}\ std::string\ \mbox{\hyperlink{classAppointment_a83053c7ebf795fe8848a0756b026852f}{Appointment::getAssociatedMedic}}()\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAppointment_ad12efbb5dca4c47541e2dad25f6b291d}{associatedMedic}};}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00028}\mbox{\hyperlink{classAppointment_a442f8e73dc7656f3fe1bd2d5d33b1676}{00028}}\ std::string\ \mbox{\hyperlink{classAppointment_a442f8e73dc7656f3fe1bd2d5d33b1676}{Appointment::getAppointmentLocation}}()\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAppointment_a2b44c866988353192f4b3e338790b5cf}{appoinmentLocation}};}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00032}\mbox{\hyperlink{classAppointment_ad7c541acb58da534a31d9e148d3d0793}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAppointment_ad7c541acb58da534a31d9e148d3d0793}{Appointment::changeAppointmentLocation}}(std::string\ newLocation)\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{classAppointment_a2b44c866988353192f4b3e338790b5cf}{appoinmentLocation}}\ =\ newLocation;}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00036}\mbox{\hyperlink{classAppointment_ab378be55aef8e663c4cfce41ade4607d}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAppointment_ab378be55aef8e663c4cfce41ade4607d}{Appointment::setAppointmentState}}(std::string\ newState)\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classAppointment_ae5e4654836c16cc1e24bf1f1716c2646}{appointmentState}}\ =\ newState;}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00040}\mbox{\hyperlink{classAppointment_a3fb7487548e10abc6e581a550f1d800d}{00040}}\ \mbox{\hyperlink{classAppointment_a3fb7487548e10abc6e581a550f1d800d}{Appointment::\string~Appointment}}()\{}
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Appointment_8cpp_source_l00042}00042\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,8 @@
+<map id="ViewDoctorList" name="ViewDoctorList">
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,568,161,653"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title="Interfaz abstracta para el patrón Command." alt="" coords="33,413,151,519"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,532,95,568,89,568,89,532"/>
+<area shape="rect" id="Node000003" href="$classSystem.html" title="Clase principal del sistema de gestión de citas." alt="" coords="5,5,179,351"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,351,95,397,89,397,89,351"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="180,141,198,154,205,178,202,194,195,206,190,203,197,192,200,178,194,157,177,145"/>
+</map>

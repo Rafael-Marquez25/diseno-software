@@ -1,0 +1,204 @@
+\doxysection{Agenda Class Reference}
+\hypertarget{classAgenda}{}\label{classAgenda}\index{Agenda@{Agenda}}
+
+
+{\ttfamily \#include $<$Agenda.\+h$>$}
+
+
+
+Collaboration diagram for Agenda\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classAgenda__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAgenda_a449a8fffc4e705561a1b1f799c72835d}{Agenda}} (int \mbox{\hyperlink{classAgenda_a40612ce297856cc3fa500f511ad9fa48}{id}})
+\item 
+int \mbox{\hyperlink{classAgenda_a5ef3082c397afdb4d6bd5291949f4a66}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{classAgenda_acd741f8ef7dd5c688e67e1c3507b678c}{set\+Associated\+Medic}} (std\+::string medic\+To\+Associate)
+\item 
+std\+::string \mbox{\hyperlink{classAgenda_a6b78229aa403c79af29cb71a958324f9}{get\+Associated\+Medic}} ()
+\item 
+\mbox{\hyperlink{classAgenda_a2344fe71f31e64ad95bf8d893e9d1025}{\texorpdfstring{$\sim$}{\string~}\+Agenda}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classAgenda_a40612ce297856cc3fa500f511ad9fa48}{id}}
+\item 
+std\+::unique\+\_\+ptr$<$ std\+::unique\+\_\+ptr$<$ std\+::string $>$\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classAgenda_ac0ccbb65bf6d3958d4bb29ecb531c2df}{schedule}}
+\item 
+std\+::string \mbox{\hyperlink{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e}{associated\+Medic}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Agenda_8h_source_l00007}{7}} of file \mbox{\hyperlink{Agenda_8h_source}{Agenda.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAgenda_a449a8fffc4e705561a1b1f799c72835d}\label{classAgenda_a449a8fffc4e705561a1b1f799c72835d} 
+\index{Agenda@{Agenda}!Agenda@{Agenda}}
+\index{Agenda@{Agenda}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{Agenda()}{Agenda()}}
+{\footnotesize\ttfamily Agenda\+::\+Agenda (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{Agenda_8cpp_source}{Agenda.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{classAgenda_a40612ce297856cc3fa500f511ad9fa48}{id}};}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{classAgenda_ac0ccbb65bf6d3958d4bb29ecb531c2df}{schedule}}\ =\ std::make\_unique<std::unique\_ptr<std::string>[]>(10);}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classAgenda_a40612ce297856cc3fa500f511ad9fa48}{id}}, and \mbox{\hyperlink{classAgenda_ac0ccbb65bf6d3958d4bb29ecb531c2df}{schedule}}.
+
+\Hypertarget{classAgenda_a2344fe71f31e64ad95bf8d893e9d1025}\label{classAgenda_a2344fe71f31e64ad95bf8d893e9d1025} 
+\index{Agenda@{Agenda}!````~Agenda@{\texorpdfstring{$\sim$}{\string~}Agenda}}
+\index{````~Agenda@{\texorpdfstring{$\sim$}{\string~}Agenda}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Agenda()}{\string~Agenda()}}
+{\footnotesize\ttfamily Agenda\+::\texorpdfstring{$\sim$}{\string~}\+Agenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{Agenda_8cpp_source}{Agenda.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAgenda_a6b78229aa403c79af29cb71a958324f9}\label{classAgenda_a6b78229aa403c79af29cb71a958324f9} 
+\index{Agenda@{Agenda}!getAssociatedMedic@{getAssociatedMedic}}
+\index{getAssociatedMedic@{getAssociatedMedic}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{getAssociatedMedic()}{getAssociatedMedic()}}
+{\footnotesize\ttfamily std\+::string Agenda\+::get\+Associated\+Medic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{Agenda_8cpp_source}{Agenda.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e}{associatedMedic}};}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e}{associated\+Medic}}.
+
+\Hypertarget{classAgenda_a5ef3082c397afdb4d6bd5291949f4a66}\label{classAgenda_a5ef3082c397afdb4d6bd5291949f4a66} 
+\index{Agenda@{Agenda}!getId@{getId}}
+\index{getId@{getId}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Agenda\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Agenda_8cpp_source}{Agenda.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAgenda_a40612ce297856cc3fa500f511ad9fa48}{id}};}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classAgenda_a40612ce297856cc3fa500f511ad9fa48}{id}}.
+
+\Hypertarget{classAgenda_acd741f8ef7dd5c688e67e1c3507b678c}\label{classAgenda_acd741f8ef7dd5c688e67e1c3507b678c} 
+\index{Agenda@{Agenda}!setAssociatedMedic@{setAssociatedMedic}}
+\index{setAssociatedMedic@{setAssociatedMedic}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{setAssociatedMedic()}{setAssociatedMedic()}}
+{\footnotesize\ttfamily void Agenda\+::set\+Associated\+Medic (\begin{DoxyParamCaption}\item[{std\+::string}]{medic\+To\+Associate }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{Agenda_8cpp_source}{Agenda.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e}{associatedMedic}}\ =\ medicToAssociate;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e}{associated\+Medic}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e}\label{classAgenda_ab6cdfef073bd4ae5ba7890e197d4933e} 
+\index{Agenda@{Agenda}!associatedMedic@{associatedMedic}}
+\index{associatedMedic@{associatedMedic}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{associatedMedic}{associatedMedic}}
+{\footnotesize\ttfamily std\+::string Agenda\+::associated\+Medic\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8h_source_l00012}{12}} of file \mbox{\hyperlink{Agenda_8h_source}{Agenda.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{classAgenda_a6b78229aa403c79af29cb71a958324f9}{get\+Associated\+Medic()}}, and \mbox{\hyperlink{classAgenda_acd741f8ef7dd5c688e67e1c3507b678c}{set\+Associated\+Medic()}}.
+
+\Hypertarget{classAgenda_a40612ce297856cc3fa500f511ad9fa48}\label{classAgenda_a40612ce297856cc3fa500f511ad9fa48} 
+\index{Agenda@{Agenda}!id@{id}}
+\index{id@{id}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Agenda\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8h_source_l00010}{10}} of file \mbox{\hyperlink{Agenda_8h_source}{Agenda.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{classAgenda_a449a8fffc4e705561a1b1f799c72835d}{Agenda()}}, and \mbox{\hyperlink{classAgenda_a5ef3082c397afdb4d6bd5291949f4a66}{get\+Id()}}.
+
+\Hypertarget{classAgenda_ac0ccbb65bf6d3958d4bb29ecb531c2df}\label{classAgenda_ac0ccbb65bf6d3958d4bb29ecb531c2df} 
+\index{Agenda@{Agenda}!schedule@{schedule}}
+\index{schedule@{schedule}!Agenda@{Agenda}}
+\doxysubsubsection{\texorpdfstring{schedule}{schedule}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$std\+::unique\+\_\+ptr$<$std\+::string$>$\mbox{[}$\,$\mbox{]}$>$ Agenda\+::schedule\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Agenda_8h_source_l00011}{11}} of file \mbox{\hyperlink{Agenda_8h_source}{Agenda.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{classAgenda_a449a8fffc4e705561a1b1f799c72835d}{Agenda()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Agenda_8h}{Agenda.\+h}}\item 
+src/\mbox{\hyperlink{Agenda_8cpp}{Agenda.\+cpp}}\end{DoxyCompactItemize}

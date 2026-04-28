@@ -1,0 +1,128 @@
+\doxysection{View\+Appointments Class Reference}
+\hypertarget{classViewAppointments}{}\label{classViewAppointments}\index{ViewAppointments@{ViewAppointments}}
+
+
+{\ttfamily \#include $<$View\+Appointments.\+h$>$}
+
+
+
+Inheritance diagram for View\+Appointments\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classViewAppointments__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for View\+Appointments\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classViewAppointments__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classViewAppointments_af64913ab8cb58a50930c35f2b1661b88}{View\+Appointments}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}sys)
+\item 
+void \mbox{\hyperlink{classViewAppointments_aa34cc84f2139aa83f8d987af3c6e473c}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Método de ejecución del comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommand_a558d80e30a1557d6117c2af7a30a8b85}{Command}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}sys)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classCommand}{Command}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand_aa545a53d35818f9efb936daf3fa16c61}{\texorpdfstring{$\sim$}{\string~}\+Command}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ViewAppointments_8h_source_l00004}{4}} of file \mbox{\hyperlink{ViewAppointments_8h_source}{View\+Appointments.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classViewAppointments_af64913ab8cb58a50930c35f2b1661b88}\label{classViewAppointments_af64913ab8cb58a50930c35f2b1661b88} 
+\index{ViewAppointments@{ViewAppointments}!ViewAppointments@{ViewAppointments}}
+\index{ViewAppointments@{ViewAppointments}!ViewAppointments@{ViewAppointments}}
+\doxysubsubsection{\texorpdfstring{ViewAppointments()}{ViewAppointments()}}
+{\footnotesize\ttfamily View\+Appointments\+::\+View\+Appointments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{ViewAppointments_8h_source_l00009}{9}} of file \mbox{\hyperlink{ViewAppointments_8h_source}{View\+Appointments.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ :\ \mbox{\hyperlink{classCommand}{Command}}\ (\ sys\ )\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classViewAppointments_aa34cc84f2139aa83f8d987af3c6e473c}\label{classViewAppointments_aa34cc84f2139aa83f8d987af3c6e473c} 
+\index{ViewAppointments@{ViewAppointments}!execute@{execute}}
+\index{execute@{execute}!ViewAppointments@{ViewAppointments}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void View\+Appointments\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método de ejecución del comando. 
+
+Este es el único método que el Invoker (\doxylink{classAdmin}{Admin}) necesita conocer. 
+
+Implements \mbox{\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}}.
+
+
+
+Definition at line \mbox{\hyperlink{ViewAppointments_8h_source_l00011}{11}} of file \mbox{\hyperlink{ViewAppointments_8h_source}{View\+Appointments.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}-\/>\mbox{\hyperlink{classSystem_a68c71c4cea74c9fb9b78b76383617097}{showAppointments}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSystem_a68c71c4cea74c9fb9b78b76383617097}{System\+::show\+Appointments()}}, and \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{Command\+::system}}.
+
+
+
+Referenced by \mbox{\hyperlink{classAdmin_aac353afc6ac6a61089ecc097a694c167}{Admin\+::handle\+User\+Actions()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classViewAppointments_aa34cc84f2139aa83f8d987af3c6e473c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classViewAppointments_aa34cc84f2139aa83f8d987af3c6e473c_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ViewAppointments_8h}{View\+Appointments.\+h}}\end{DoxyCompactItemize}

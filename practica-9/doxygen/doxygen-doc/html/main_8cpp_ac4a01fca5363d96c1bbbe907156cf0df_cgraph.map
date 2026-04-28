@@ -1,0 +1,15 @@
+<map id="robotAcompanySim" name="robotAcompanySim">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,156,105"/>
+<area shape="rect" id="Node000002" href="$classSystem.html#ab8fd79d8d49644a5dc755879e071f371" title="Asigna un robot libre para acompañar." alt="" coords="234,5,389,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,77,203,39,232,31,233,36,205,45,110,82"/>
+<area shape="rect" id="Node000004" href="$classSystem.html#a331090b814394cc43c32a58600740137" title="Añade un robot a la cola de robots del sistema." alt="" coords="241,55,382,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,82,227,74,227,79,156,87"/>
+<area shape="rect" id="Node000005" href="$classSystem.html#aa298df5f8a8fafba9c1556d7bcb52ac3" title="Muestra los robots disponibles." alt="" coords="204,104,419,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="156,98,190,101,190,107,156,103"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#ab13e858612c64eeef73aff1d8a03945e" title=" " alt="" coords="267,153,355,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="112,103,205,138,255,152,253,157,203,143,110,108"/>
+<area shape="rect" id="Node000003" href="$classRobot.html#a58b67cfa1b3e51d4f5c172782babe069" title=" " alt="" coords="469,5,587,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,15,455,15,455,21,389,21"/>
+<area shape="rect" id="Node000006" href="$classRobot.html#aac05de3f5871f1624d5a8c8860f20880" title=" " alt="" coords="467,104,589,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="419,114,453,114,453,119,419,119"/>
+</map>

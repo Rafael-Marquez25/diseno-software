@@ -1,0 +1,7 @@
+<map id="System::createMedic" name="System::createMedic">
+<area shape="rect" id="Node000001" title="Asigna una especialidad a un médico." alt="" coords="5,31,164,56"/>
+<area shape="rect" id="Node000002" href="$classSystem.html#aa6e30aadd4e7c06a101d59e4fce4dcb3" title="Muestra la lista de médicos registrados." alt="" coords="212,5,395,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,31,198,27,199,33,165,37"/>
+<area shape="rect" id="Node000003" href="$classSystem.html#ad8bd10640ec9275a50277de9a7b6147e" title="Verifica que un usuario sea médico." alt="" coords="226,55,381,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,49,213,55,212,60,164,55"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Admin::createMedic" name="Admin::createMedic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,157,56"/>
+<area shape="rect" id="Node000002" href="$classAdmin.html#a4a010b41d8ec37d8cc33c47e3fa7b606" title=" " alt="" coords="205,5,380,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,32,191,27,192,33,158,37"/>
+<area shape="rect" id="Node000003" href="$classAdmin.html#ad214241b11ffdd8cdf6e09ad25b01f1f" title=" " alt="" coords="219,55,367,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,49,205,55,205,60,157,55"/>
+</map>

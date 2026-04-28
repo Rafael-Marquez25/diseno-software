@@ -1,0 +1,316 @@
+\doxysection{Patient Class Reference}
+\hypertarget{classPatient}{}\label{classPatient}\index{Patient@{Patient}}
+
+
+{\ttfamily \#include $<$Patient.\+h$>$}
+
+
+
+Inheritance diagram for Patient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classPatient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Patient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classPatient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPatient_a0e2048049504a5fc2ade38f4f3c8a2ea}{Patient}} (int Id, std\+::string \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}}, std\+::string \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}, std\+::string \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, std\+::string specialty)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classUser}{User}} $>$ \mbox{\hyperlink{classPatient_aff8f87eee33acde4ad4de9ea49805a6d}{clone}} (int \mbox{\hyperlink{classUser_aa7e6e39b43020bbe9c3a196b3689b0f7}{id}}, std\+::string \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}}, std\+::string \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}, std\+::string \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, std\+::string specialty) const
+\item 
+bool \mbox{\hyperlink{classPatient_acb1d97f5e69114cd0bc4b10799448659}{get\+Appointment\+State}} ()
+\item 
+std\+::string \mbox{\hyperlink{classPatient_ad1c7bf55e444cd842eb8dc9312936106}{get\+Appointment\+History\+To\+String}} ()
+\item 
+void \mbox{\hyperlink{classPatient_a63e7e56100d1e51c12ba22ff82aff31c}{add\+Appointment\+To\+History}} (\mbox{\hyperlink{classAppointment}{Appointment}} \&appointment\+To\+Add)
+\item 
+void \mbox{\hyperlink{classPatient_a9a2c446d423ef553e925f181dd7b6f18}{set\+Current\+Appointment}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classAppointment}{Appointment}} $>$ appointment)
+\item 
+void \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{show\+Menu}} () const
+\item 
+\mbox{\hyperlink{classPatient_ad37fb0570742c7b90b0437dde4bcc11a}{\texorpdfstring{$\sim$}{\string~}\+Patient}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classUser}{User}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser_a1b57059fbeb623e609e783587a546310}{User}} (int \mbox{\hyperlink{classUser_aa7e6e39b43020bbe9c3a196b3689b0f7}{id}}, std\+::string \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}}, std\+::string \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}, std\+::string \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}})
+\item 
+virtual int \mbox{\hyperlink{classUser_a010077fcd52d32fd3b4e1171f748a86a}{get\+Id}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classUser_a374cbe023e5cc08bdec6d7d009c4cfe4}{get\+Role}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classUser_a180e5acdc4b150463652d90d54caa8fc}{get\+Password}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classUser_a7079d6aefd9d1b930d837039c1b3e7df}{get\+Username}} () const
+\item 
+\mbox{\hyperlink{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}{\texorpdfstring{$\sim$}{\string~}\+User}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classAppointment}{Appointment}} $>$ \mbox{\hyperlink{classPatient_a171a7f7b1f8147bb6ae8f8215b55aa56}{current\+Appointment}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classAppointment}{Appointment}} $>$ \mbox{\hyperlink{classPatient_abf479e82cda79e903ba1cff912a6851e}{appointment\+History}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Patient_8h_source_l00009}{9}} of file \mbox{\hyperlink{Patient_8h_source}{Patient.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPatient_a0e2048049504a5fc2ade38f4f3c8a2ea}\label{classPatient_a0e2048049504a5fc2ade38f4f3c8a2ea} 
+\index{Patient@{Patient}!Patient@{Patient}}
+\index{Patient@{Patient}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{Patient()}{Patient()}}
+{\footnotesize\ttfamily Patient\+::\+Patient (\begin{DoxyParamCaption}\item[{int}]{Id,  }\item[{std\+::string}]{role,  }\item[{std\+::string}]{password,  }\item[{std\+::string}]{username,  }\item[{std\+::string}]{specialty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{Patient_8cpp_source}{Patient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ :\ \mbox{\hyperlink{classUser}{User}}(\textcolor{keywordtype}{id},\ \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}},\ \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}},\ \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}})\{}
+\DoxyCodeLine{00006\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPatient_ad37fb0570742c7b90b0437dde4bcc11a}\label{classPatient_ad37fb0570742c7b90b0437dde4bcc11a} 
+\index{Patient@{Patient}!````~Patient@{\texorpdfstring{$\sim$}{\string~}Patient}}
+\index{````~Patient@{\texorpdfstring{$\sim$}{\string~}Patient}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Patient()}{\string~Patient()}}
+{\footnotesize\ttfamily Patient\+::\texorpdfstring{$\sim$}{\string~}\+Patient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{Patient_8cpp_source}{Patient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPatient_a63e7e56100d1e51c12ba22ff82aff31c}\label{classPatient_a63e7e56100d1e51c12ba22ff82aff31c} 
+\index{Patient@{Patient}!addAppointmentToHistory@{addAppointmentToHistory}}
+\index{addAppointmentToHistory@{addAppointmentToHistory}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{addAppointmentToHistory()}{addAppointmentToHistory()}}
+{\footnotesize\ttfamily void Patient\+::add\+Appointment\+To\+History (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAppointment}{Appointment}} \&}]{appointment\+To\+Add }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Patient_8cpp_source}{Patient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classPatient_abf479e82cda79e903ba1cff912a6851e}{appointmentHistory}}.push\_back(appointment);}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classPatient_abf479e82cda79e903ba1cff912a6851e}{appointment\+History}}.
+
+\Hypertarget{classPatient_aff8f87eee33acde4ad4de9ea49805a6d}\label{classPatient_aff8f87eee33acde4ad4de9ea49805a6d} 
+\index{Patient@{Patient}!clone@{clone}}
+\index{clone@{clone}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classUser}{User}} $>$ Patient\+::clone (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{role,  }\item[{std\+::string}]{password,  }\item[{std\+::string}]{username,  }\item[{std\+::string}]{specialty }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classUser_a543229bd835a68daccb70daaf29ca133}{User}}.
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8h_source_l00017}{17}} of file \mbox{\hyperlink{Patient_8h_source}{Patient.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<Patient>\ (\textcolor{keywordtype}{id},\ \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}},\ \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}},\ \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}},\ specialty);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{User\+::password}}, \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{User\+::role}}, and \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{User\+::username}}.
+
+
+
+Referenced by \mbox{\hyperlink{classSystem_a4870759acb84e414eae83e78468d2fdd}{System\+::make\+User()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPatient_aff8f87eee33acde4ad4de9ea49805a6d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPatient_ad1c7bf55e444cd842eb8dc9312936106}\label{classPatient_ad1c7bf55e444cd842eb8dc9312936106} 
+\index{Patient@{Patient}!getAppointmentHistoryToString@{getAppointmentHistoryToString}}
+\index{getAppointmentHistoryToString@{getAppointmentHistoryToString}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{getAppointmentHistoryToString()}{getAppointmentHistoryToString()}}
+{\footnotesize\ttfamily std\+::string Patient\+::get\+Appointment\+History\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classPatient_acb1d97f5e69114cd0bc4b10799448659}\label{classPatient_acb1d97f5e69114cd0bc4b10799448659} 
+\index{Patient@{Patient}!getAppointmentState@{getAppointmentState}}
+\index{getAppointmentState@{getAppointmentState}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{getAppointmentState()}{getAppointmentState()}}
+{\footnotesize\ttfamily bool Patient\+::get\+Appointment\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classPatient_a9a2c446d423ef553e925f181dd7b6f18}\label{classPatient_a9a2c446d423ef553e925f181dd7b6f18} 
+\index{Patient@{Patient}!setCurrentAppointment@{setCurrentAppointment}}
+\index{setCurrentAppointment@{setCurrentAppointment}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{setCurrentAppointment()}{setCurrentAppointment()}}
+{\footnotesize\ttfamily void Patient\+::set\+Current\+Appointment (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classAppointment}{Appointment}} $>$}]{appointment }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{Patient_8cpp_source}{Patient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classPatient_a171a7f7b1f8147bb6ae8f8215b55aa56}{currentAppointment}}\ =\ std::move(appointment);}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classPatient_a171a7f7b1f8147bb6ae8f8215b55aa56}{current\+Appointment}}.
+
+\Hypertarget{classPatient_a68b369c274f70869552b5d640e547736}\label{classPatient_a68b369c274f70869552b5d640e547736} 
+\index{Patient@{Patient}!showMenu@{showMenu}}
+\index{showMenu@{showMenu}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{showMenu()}{showMenu()}}
+{\footnotesize\ttfamily void Patient\+::show\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{Patient_8cpp_source}{Patient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ system(\textcolor{stringliteral}{"{}clear"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ userSelection;}
+\DoxyCodeLine{00020\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}===\ Menu\ Patient\ ===\(\backslash\)n"{}}\ }
+\DoxyCodeLine{00021\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}1.\ Solicitar\ Cita.\(\backslash\)n"{}}}
+\DoxyCodeLine{00022\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}2.\ Ver\ Mis\ Citas.\(\backslash\)n"{}}}
+\DoxyCodeLine{00023\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}3.\ Volver.\(\backslash\)n"{}}}
+\DoxyCodeLine{00024\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Seleccione\ una\ opción:\ "{}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::cin\ >>\ userSelection;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{switch}\ (userSelection)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Funcion\ no\ implementada.\ Presiona\ Enter\ para\ continuar...\(\backslash\)n"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{showMenu}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Funcion\ no\ implementada.\ Presiona\ Enter\ para\ continuar...\(\backslash\)n"{}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{showMenu}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Selecione\ una\ opccion\ valida.\ Presiona\ Enter\ para\ continuar...\(\backslash\)n"{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{showMenu}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{show\+Menu()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}, and \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{show\+Menu()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classPatient_a68b369c274f70869552b5d640e547736_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{classPatient_a68b369c274f70869552b5d640e547736_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPatient_abf479e82cda79e903ba1cff912a6851e}\label{classPatient_abf479e82cda79e903ba1cff912a6851e} 
+\index{Patient@{Patient}!appointmentHistory@{appointmentHistory}}
+\index{appointmentHistory@{appointmentHistory}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{appointmentHistory}{appointmentHistory}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classAppointment}{Appointment}}$>$ Patient\+::appointment\+History\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8h_source_l00013}{13}} of file \mbox{\hyperlink{Patient_8h_source}{Patient.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{classPatient_a63e7e56100d1e51c12ba22ff82aff31c}{add\+Appointment\+To\+History()}}.
+
+\Hypertarget{classPatient_a171a7f7b1f8147bb6ae8f8215b55aa56}\label{classPatient_a171a7f7b1f8147bb6ae8f8215b55aa56} 
+\index{Patient@{Patient}!currentAppointment@{currentAppointment}}
+\index{currentAppointment@{currentAppointment}!Patient@{Patient}}
+\doxysubsubsection{\texorpdfstring{currentAppointment}{currentAppointment}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classAppointment}{Appointment}}$>$ Patient\+::current\+Appointment\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Patient_8h_source_l00012}{12}} of file \mbox{\hyperlink{Patient_8h_source}{Patient.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{classPatient_a9a2c446d423ef553e925f181dd7b6f18}{set\+Current\+Appointment()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Patient_8h}{Patient.\+h}}\item 
+src/\mbox{\hyperlink{Patient_8cpp}{Patient.\+cpp}}\end{DoxyCompactItemize}

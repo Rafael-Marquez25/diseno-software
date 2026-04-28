@@ -1,0 +1,84 @@
+\doxysection{Robot.\+cpp}
+\hypertarget{Robot_8cpp_source}{}\label{Robot_8cpp_source}\index{src/Robot.cpp@{src/Robot.cpp}}
+\mbox{\hyperlink{Robot_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Robot_8h}{Robot.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00007}\mbox{\hyperlink{classRobot_af1d62a40994cf7ea2cfbf5220b079aa2}{00007}}\ \mbox{\hyperlink{classRobot_af1d62a40994cf7ea2cfbf5220b079aa2}{Robot::Robot}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00008}00008\ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{classRobot_ad7fd8fd1721ae41eb67246b9b360e7a6}{id}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{classRobot_ad7e83b46946f0b8a78cf11f4666777bd}{state}}\ =\ \textcolor{stringliteral}{"{}Libre"{}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{classRobot_a12facbf6a536b93080accf9dfefa891c}{lastActivity}}\ =\ std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00013}\mbox{\hyperlink{classRobot_ab1c4e364512a944356c69adf13e5b998}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_ab1c4e364512a944356c69adf13e5b998}{Robot::move}}()\{\}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00015}\mbox{\hyperlink{classRobot_abda904fa7fc3b50bf8daaeb072e0a6b1}{00015}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRobot_abda904fa7fc3b50bf8daaeb072e0a6b1}{Robot::getId}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRobot_ad7fd8fd1721ae41eb67246b9b360e7a6}{id}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00019}\mbox{\hyperlink{classRobot_a5ee441443b20549c216d6fb5632f0b0b}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a5ee441443b20549c216d6fb5632f0b0b}{Robot::offerSupport}}()\{\}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00021}\mbox{\hyperlink{classRobot_a26e2ddf65d39075867e6a6bbccf5aefc}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a26e2ddf65d39075867e6a6bbccf5aefc}{Robot::setState}}(\textcolor{keywordtype}{bool}\ newState)\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classRobot_ad7e83b46946f0b8a78cf11f4666777bd}{state}}\ =\ newState;}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00025}\mbox{\hyperlink{classRobot_aac05de3f5871f1624d5a8c8860f20880}{00025}}\ std::string\ \mbox{\hyperlink{classRobot_aac05de3f5871f1624d5a8c8860f20880}{Robot::getState}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRobot_ad7e83b46946f0b8a78cf11f4666777bd}{state}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00029}\mbox{\hyperlink{classRobot_a085e2b5451f0f95051c4fc66e8c433b3}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a085e2b5451f0f95051c4fc66e8c433b3}{Robot::goToCharge}}()\{\}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00031}\mbox{\hyperlink{classRobot_abc2c0ef595776c667dbc512ac1f23c4a}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_abc2c0ef595776c667dbc512ac1f23c4a}{Robot::validatePatientInfo}}()\{\}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00033}\mbox{\hyperlink{classRobot_a1d9626dee3f69f8b1d7e5ba4825a0dc8}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a1d9626dee3f69f8b1d7e5ba4825a0dc8}{Robot::printTicket}}()\{\}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00035}\mbox{\hyperlink{classRobot_aa9ecb0862df6b325369c923150da09ae}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_aa9ecb0862df6b325369c923150da09ae}{Robot::updatePosition}}(\mbox{\hyperlink{structPosition}{Position}}\ newPosition)\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{classRobot_a4bd19049a53d9d56cc385449f5056678}{robotPosition}}\ =\ newPosition;}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00039}\mbox{\hyperlink{classRobot_ae2c13db52407ef3f7e955a54ccf5dea6}{00039}}\ \mbox{\hyperlink{structPosition}{Position}}\ \mbox{\hyperlink{classRobot_ae2c13db52407ef3f7e955a54ccf5dea6}{Robot::getPosition}}()\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRobot_a4bd19049a53d9d56cc385449f5056678}{robotPosition}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00043}\mbox{\hyperlink{classRobot_ab72a128e5f11f0ee5c3bec1314c21442}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_ab72a128e5f11f0ee5c3bec1314c21442}{Robot::associatePatient}}(std::string\ patient)\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{classRobot_a89006512f303c5f9d206a4f26b46e099}{associatedPatient}}\ =\ patient;}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00047}\mbox{\hyperlink{classRobot_a58b67cfa1b3e51d4f5c172782babe069}{00047}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a58b67cfa1b3e51d4f5c172782babe069}{Robot::dummy}}(\textcolor{keywordtype}{int}\ segundos)\ \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//Acá\ creo\ un\ hilo\ para\ simular\ la\ tarea\ sin\ bloquear\ el\ hilo\ principal}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00049}00049\ \ \ \ \ std::thread([\textcolor{keyword}{this},\ segundos]()\ \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Acá\ se\ protege\ el\ acceso\ al\ estado\ con\ mutex}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{classRobot_a42cacc16a4eea190fa278cca84d6c776}{mtx}});}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRobot_ad7e83b46946f0b8a78cf11f4666777bd}{state}}\ =\ \textcolor{stringliteral}{"{}Ocupado"{}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[Robot\ "{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}]\ acompañado\ por\ "{}}\ <<\ segundos\ <<\ \textcolor{stringliteral}{"{}\ segundos.\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Esta\ linea\ simula\ el\ tiempo\ de\ acompañamiento\ del\ robot\ al\ paciente}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::seconds(segundos));}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Acá\ protege\ el\ acceso\ al\ estado\ para\ cambiar\ el\ estado}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{classRobot_a42cacc16a4eea190fa278cca84d6c776}{mtx}});}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRobot_ad7e83b46946f0b8a78cf11f4666777bd}{state}}\ =\ \textcolor{stringliteral}{"{}Libre"{}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRobot_a12facbf6a536b93080accf9dfefa891c}{lastActivity}}\ =\ std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[Robot\ "{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}]\ Finalizó.\ Estado:\ Libre.\ \(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00066}00066\ \ \ \ \ \}).detach();\ \textcolor{comment}{//hilo\ separado,\ no\ bloquea.}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00069}\mbox{\hyperlink{classRobot_ae4f060b6dec23fef87f537355cd2f7d1}{00069}}\ std::ostream\ \&\mbox{\hyperlink{Robot_8cpp_af02d27c79de9ff3c8a11ea2feafcf9f9}{operator<<}}(std::ostream\ \&output,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRobot}{Robot}}\ \&robot)\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ Format\ [id\ -\/\ State\ -\/\ last\ activity]}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00071}00071\ \ \ \ \ output\ <<\ \textcolor{stringliteral}{"{}[Robot\ "{}}\ <<\ robot.\mbox{\hyperlink{classRobot_abda904fa7fc3b50bf8daaeb072e0a6b1}{getId}}()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ \textcolor{stringliteral}{"{}State:\ "{}}\ <<\ robot.\mbox{\hyperlink{classRobot_aac05de3f5871f1624d5a8c8860f20880}{getState}}()\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ \textcolor{stringliteral}{"{}Last\ Activity:\ "{}}\ <<\ robot.\mbox{\hyperlink{classRobot_aa6bb3c1827c56019725ab5b802f18026}{getLastActivityTime}}()\ <<\ \textcolor{stringliteral}{"{}s]"{}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ output;\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00075}\mbox{\hyperlink{classRobot_aa6bb3c1827c56019725ab5b802f18026}{00075}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRobot_aa6bb3c1827c56019725ab5b802f18026}{Robot::getLastActivityTime}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00076}00076\ \ \ \ \ std::chrono::steady\_clock::duration\ elapsed\ =\ std::chrono::steady\_clock::now()\ -\/\ \mbox{\hyperlink{classRobot_a12facbf6a536b93080accf9dfefa891c}{lastActivity}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{return}\ std::chrono::duration\_cast<std::chrono::milliseconds>(elapsed).count()\ /\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{Robot_8cpp_source_l00078}00078\ \}}
+
+\end{DoxyCode}

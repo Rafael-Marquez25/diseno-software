@@ -1,0 +1,64 @@
+\doxysection{sql\+\_\+insert\+\_\+u.\+cpp}
+\hypertarget{sql__insert__u_8cpp_source}{}\label{sql__insert__u_8cpp_source}\index{src/sql\_insert\_u.cpp@{src/sql\_insert\_u.cpp}}
+\mbox{\hyperlink{sql__insert__u_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <sqlite3.h>}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00004}\mbox{\hyperlink{sql__insert__u_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00004}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sql__insert__u_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00005}00005\ \ \ \ \ sqlite3*\ db;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{int}\ rc;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{keywordtype}{char}\ *errMsg\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Abrir\ la\ base\ de\ datos}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00010}00010\ \ \ \ \ rc\ =\ sqlite3\_open(\textcolor{stringliteral}{"{}appointment\_system.db"{}},\ \&db);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc)\ \{}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}No\ se\ pudo\ abrir\ la\ base\ de\ datos:\ "{}}\ <<\ sqlite3\_errmsg(db)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00016}00016\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00017}00017\ \ \ \ \ std::string\ password;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00018}00018\ \ \ \ \ std::string\ role;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00020}00020\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Introduce\ el\ nombre:\ "{}};}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00021}00021\ \ \ \ \ std::cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00023}00023\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Introduce\ la\ contraseña:\ "{}};}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00024}00024\ \ \ \ \ std::cin\ >>\ password;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00026}00026\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Introduce\ el\ tipo:\ "{}};}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00027}00027\ \ \ \ \ std::cin\ >>\ role;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ Sentencia\ preparada\ con\ parámetros}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sql\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ USER\ (USERNAME,\ PASSWORD,\ ROLE)\ VALUES\ (?,\ ?,\ ?);"{}};}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00031}00031\ \ \ \ \ sqlite3\_stmt*\ stmt;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00033}00033\ \ \ \ \ rc\ =\ sqlite3\_prepare\_v2(db,\ sql,\ -\/1,\ \&stmt,\ NULL);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_OK)\ \{}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ al\ preparar\ la\ sentencia:\ "{}}\ <<\ sqlite3\_errmsg(db)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ sqlite3\_close(db);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Enlazar\ los\ valores}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00041}00041\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 1,\ name.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00042}00042\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 2,\ password.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00043}00043\ \ \ \ \ sqlite3\_bind\_text(stmt,\ 3,\ role.c\_str(),\ -\/1,\ SQLITE\_TRANSIENT);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Ejecutar}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00046}00046\ \ \ \ \ rc\ =\ sqlite3\_step(stmt);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (rc\ !=\ SQLITE\_DONE)\ \{}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ al\ insertar\ datos:\ "{}}\ <<\ sqlite3\_errmsg(db)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00049}00049\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Datos\ insertados\ correctamente.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Liberar}}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00054}00054\ \ \ \ \ sqlite3\_finalize(stmt);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00055}00055\ \ \ \ \ sqlite3\_close(db);}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{sql__insert__u_8cpp_source_l00058}00058\ \}}
+
+\end{DoxyCode}

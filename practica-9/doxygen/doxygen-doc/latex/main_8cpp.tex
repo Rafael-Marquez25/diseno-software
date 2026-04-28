@@ -1,0 +1,292 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include "{}System.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ab3002fe8e0074c9e2ecb5b835e5e819f}{main\+Menu}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_ab13e858612c64eeef73aff1d8a03945e}{print\+Menu}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df}{robot\+Acompany\+Sim}} (\mbox{\hyperlink{classSystem}{System}} \&main\+System)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ main}}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{classSystem}{System}}*\ mainSystem\ =\ \mbox{\hyperlink{classSystem_ad82d69dc75eb33ccd12dc8aa055ca7f8}{System::getTheSystem}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ mainSystem-\/>\mbox{\hyperlink{classSystem_a17da24473fade5ee31153e9e2a44b76d}{openDb}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classDatabaseError}{DatabaseError}}\ \&e)}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ menu\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ bool\ for\ the\ logic\ of\ the\ loop}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{while}(menu)\{\ \textcolor{comment}{//\ loop\ for\ the\ menu}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}clear"{}});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ab3002fe8e0074c9e2ecb5b835e5e819f}{mainMenu}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userSelection\ =\ 0;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ std::cin\ >>\ userSelection;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (userSelection)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\{\ \textcolor{comment}{//\ option\ to\ register\ a\ new\ user}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}clear"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ mainSystem-\/>\mbox{\hyperlink{classSystem_af332bfab149fa2f2582004da3cf2af01}{registerNewUser}}(mainSystem-\/>\mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{getDb}}());\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPresiona\ Enter\ para\ continuar..."{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\{\ \textcolor{comment}{//\ option\ to\ login}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<User>\ user\ =\ mainSystem-\/>\mbox{\hyperlink{classSystem_af6dde572eff39a551c4f897de7fbd8ee}{login}}(mainSystem-\/>\mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{getDb}}());}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (user)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Login\ exitoso.\ Rol:\ "{}}\ <<\ user-\/>getRole()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ role\ =\ user-\/>getRole();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (role\ ==\ \textcolor{stringliteral}{"{}Admin"{}})\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Administrador\(\backslash\)n"{}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classAdmin}{Admin}}\ *a\ =\ \textcolor{keyword}{dynamic\_cast\ <}\mbox{\hyperlink{classAdmin}{Admin}}*\textcolor{keyword}{>}(user.get());}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ a-\/>\mbox{\hyperlink{classAdmin_a8efd41924d66aed14c392aca7c6108ef}{showMenu}}(mainSystem);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (role\ ==\ \textcolor{stringliteral}{"{}Medic"{}})\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMedic}{Medic}}\ *d\ =\ \textcolor{keyword}{dynamic\_cast\ <}\mbox{\hyperlink{classMedic}{Medic}}*\textcolor{keyword}{>}(user.get());}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Especialidad:\ "{}}\ <<\ d-\/>\mbox{\hyperlink{classMedic_acc4bbcf16931c83ace3867a9f78ef2da}{getSpecialty}}()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d-\/>\mbox{\hyperlink{classMedic_aa83da48b1fbef6008307cbf9fefa478f}{showMenu}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (role\ ==\ \textcolor{stringliteral}{"{}Patient"{}})\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPatient}{Patient}}\ *p\ =\ \textcolor{keyword}{dynamic\_cast\ <}\mbox{\hyperlink{classPatient}{Patient}}*\textcolor{keyword}{>}(user.get());}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Paciente:\ "{}}\ <<\ p-\/>\mbox{\hyperlink{classUser_a7079d6aefd9d1b930d837039c1b3e7df}{getUsername}}()\ <<\ \textcolor{stringliteral}{"{}\ ||"{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p-\/>\mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{showMenu}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{catch}(\mbox{\hyperlink{classInvalidCredentialsError}{InvalidCredentialsError}}\ \&e)\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classDatabaseError}{DatabaseError}}\ \&e)\{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPresiona\ Enter\ para\ continuar..."{}};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df}{robotAcompanySim}}(*mainSystem);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\{\ \textcolor{comment}{//\ option\ to\ exit}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ menu\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{comment}{//\ default\ wrong\ option}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opción\ inválida.\ Presiona\ Enter\ para\ continuar..."{}};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00158\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{System\+::get\+Db()}}, \mbox{\hyperlink{classMedic_acc4bbcf16931c83ace3867a9f78ef2da}{Medic\+::get\+Specialty()}}, \mbox{\hyperlink{classSystem_ad82d69dc75eb33ccd12dc8aa055ca7f8}{System\+::get\+The\+System()}}, \mbox{\hyperlink{classUser_a7079d6aefd9d1b930d837039c1b3e7df}{User\+::get\+Username()}}, \mbox{\hyperlink{classSystem_af6dde572eff39a551c4f897de7fbd8ee}{System\+::login()}}, \mbox{\hyperlink{main_8cpp_ab3002fe8e0074c9e2ecb5b835e5e819f}{main\+Menu()}}, \mbox{\hyperlink{classSystem_a17da24473fade5ee31153e9e2a44b76d}{System\+::open\+Db()}}, \mbox{\hyperlink{classSystem_af332bfab149fa2f2582004da3cf2af01}{System\+::register\+New\+User()}}, \mbox{\hyperlink{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df}{robot\+Acompany\+Sim()}}, \mbox{\hyperlink{classMedic_aa83da48b1fbef6008307cbf9fefa478f}{Medic\+::show\+Menu()}}, \mbox{\hyperlink{classPatient_a68b369c274f70869552b5d640e547736}{Patient\+::show\+Menu()}}, and \mbox{\hyperlink{classAdmin_a8efd41924d66aed14c392aca7c6108ef}{Admin\+::show\+Menu()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ab3002fe8e0074c9e2ecb5b835e5e819f}\label{main_8cpp_ab3002fe8e0074c9e2ecb5b835e5e819f} 
+\index{main.cpp@{main.cpp}!mainMenu@{mainMenu}}
+\index{mainMenu@{mainMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
+{\footnotesize\ttfamily void main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}===\ Plataforma\ gestión\ de\ citas\ ===\(\backslash\)n"{}}\ }
+\DoxyCodeLine{00008\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}1.\ Registrar\ nuevo\ usuario.\(\backslash\)n"{}}}
+\DoxyCodeLine{00009\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}2.\ Iniciar\ Sesión.\(\backslash\)n"{}}}
+\DoxyCodeLine{00010\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}3.\ Acompañamiento\ de\ Robots.\(\backslash\)n"{}}}
+\DoxyCodeLine{00011\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}4.\ Salir.\(\backslash\)n"{}}}
+\DoxyCodeLine{00012\ \ \ \ \ <<\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Seleccione\ una\ opción:\ "{}};}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{main_8cpp_ab3002fe8e0074c9e2ecb5b835e5e819f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ab13e858612c64eeef73aff1d8a03945e}\label{main_8cpp_ab13e858612c64eeef73aff1d8a03945e} 
+\index{main.cpp@{main.cpp}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily void print\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSeleciona\ una\ opcción:\(\backslash\)n"{}}\ }
+\DoxyCodeLine{00017\ \ \ \ \ <<\ \textcolor{stringliteral}{"{}1.\ Acompañar.\(\backslash\)n"{}}}
+\DoxyCodeLine{00018\ \ \ \ \ <<\ \textcolor{stringliteral}{"{}2.\ Mostrar\ robots\ libres.\(\backslash\)n"{}}}
+\DoxyCodeLine{00019\ \ \ \ \ <<\ \textcolor{stringliteral}{"{}3.\ Volver.\(\backslash\)n"{}};\ }
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df}{robot\+Acompany\+Sim()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ab13e858612c64eeef73aff1d8a03945e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df}\label{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df} 
+\index{main.cpp@{main.cpp}!robotAcompanySim@{robotAcompanySim}}
+\index{robotAcompanySim@{robotAcompanySim}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{robotAcompanySim()}{robotAcompanySim()}}
+{\footnotesize\ttfamily void robot\+Acompany\+Sim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \&}]{main\+System }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ instance\ of\ our\ robots\ }}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}\ robot1\ =\ \mbox{\hyperlink{classRobot}{Robot}}(1);}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}\ robot2\ =\ \mbox{\hyperlink{classRobot}{Robot}}(2);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}\ robot3\ =\ \mbox{\hyperlink{classRobot}{Robot}}(3);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classRobot}{Robot}}\ robot4\ =\ \mbox{\hyperlink{classRobot}{Robot}}(4);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ add\ the\ robots\ to\ the\ system}}
+\DoxyCodeLine{00032\ \ \ \ \ mainSystem.\mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{addRobot}}(robot1);}
+\DoxyCodeLine{00033\ \ \ \ \ mainSystem.\mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{addRobot}}(robot2);}
+\DoxyCodeLine{00034\ \ \ \ \ mainSystem.\mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{addRobot}}(robot3);}
+\DoxyCodeLine{00035\ \ \ \ \ mainSystem.\mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{addRobot}}(robot4);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ menu\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{while}(menu)\{\ \textcolor{comment}{//\ loop\ for\ the\ menu}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_ab13e858612c64eeef73aff1d8a03945e}{printMenu}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userSelection\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::cin\ >>\ userSelection;}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (userSelection)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ mainSystem.\mbox{\hyperlink{classSystem_ab8fd79d8d49644a5dc755879e071f371}{accompany}}(15);\ \textcolor{comment}{//\ the\ firts\ queue\ robot\ accompany\ for\ n\ seconds}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ mainSystem.\mbox{\hyperlink{classSystem_aa298df5f8a8fafba9c1556d7bcb52ac3}{printAvailableRobots}}();\ \textcolor{comment}{//\ show\ all\ the\ aviable\ robots}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ menu\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ exit\ the\ loop}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nOpcion\ invalida.\ Presiona\ Enter\ para\ continuar..."{}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.get();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSystem_ab8fd79d8d49644a5dc755879e071f371}{System\+::accompany()}}, \mbox{\hyperlink{classSystem_a331090b814394cc43c32a58600740137}{System\+::add\+Robot()}}, \mbox{\hyperlink{classSystem_aa298df5f8a8fafba9c1556d7bcb52ac3}{System\+::print\+Available\+Robots()}}, and \mbox{\hyperlink{main_8cpp_ab13e858612c64eeef73aff1d8a03945e}{print\+Menu()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{main_8cpp_ac4a01fca5363d96c1bbbe907156cf0df_icgraph}
+\end{center}
+\end{figure}

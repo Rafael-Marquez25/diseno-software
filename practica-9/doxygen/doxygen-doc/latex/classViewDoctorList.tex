@@ -1,0 +1,116 @@
+\doxysection{View\+Doctor\+List Class Reference}
+\hypertarget{classViewDoctorList}{}\label{classViewDoctorList}\index{ViewDoctorList@{ViewDoctorList}}
+
+
+{\ttfamily \#include $<$View\+Doctor\+List.\+h$>$}
+
+
+
+Inheritance diagram for View\+Doctor\+List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classViewDoctorList__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for View\+Doctor\+List\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classViewDoctorList__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classViewDoctorList_a6d69c0becb1584c1bec3a614eb19dfd2}{View\+Doctor\+List}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}sys)
+\item 
+void \mbox{\hyperlink{classViewDoctorList_a85f18d08c4134d6d12e4cd163fbbccd5}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Método de ejecución del comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommand_a558d80e30a1557d6117c2af7a30a8b85}{Command}} (\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}sys)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classCommand}{Command}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCommand_aa545a53d35818f9efb936daf3fa16c61}{\texorpdfstring{$\sim$}{\string~}\+Command}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCommand}{Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ViewDoctorList_8h_source_l00004}{4}} of file \mbox{\hyperlink{ViewDoctorList_8h_source}{View\+Doctor\+List.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classViewDoctorList_a6d69c0becb1584c1bec3a614eb19dfd2}\label{classViewDoctorList_a6d69c0becb1584c1bec3a614eb19dfd2} 
+\index{ViewDoctorList@{ViewDoctorList}!ViewDoctorList@{ViewDoctorList}}
+\index{ViewDoctorList@{ViewDoctorList}!ViewDoctorList@{ViewDoctorList}}
+\doxysubsubsection{\texorpdfstring{ViewDoctorList()}{ViewDoctorList()}}
+{\footnotesize\ttfamily View\+Doctor\+List\+::\+View\+Doctor\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} \texorpdfstring{$\ast$}{*}}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{ViewDoctorList_8h_source_l00009}{9}} of file \mbox{\hyperlink{ViewDoctorList_8h_source}{View\+Doctor\+List.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ :\ \mbox{\hyperlink{classCommand}{Command}}\ (\ sys\ )\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classViewDoctorList_a85f18d08c4134d6d12e4cd163fbbccd5}\label{classViewDoctorList_a85f18d08c4134d6d12e4cd163fbbccd5} 
+\index{ViewDoctorList@{ViewDoctorList}!execute@{execute}}
+\index{execute@{execute}!ViewDoctorList@{ViewDoctorList}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void View\+Doctor\+List\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método de ejecución del comando. 
+
+Este es el único método que el Invoker (\doxylink{classAdmin}{Admin}) necesita conocer. 
+
+Implements \mbox{\hyperlink{classCommand_a6fd7d9bd8df8bfc881e4d6c7cd1878b7}{Command}}.
+
+
+
+Definition at line \mbox{\hyperlink{ViewDoctorList_8h_source_l00011}{11}} of file \mbox{\hyperlink{ViewDoctorList_8h_source}{View\+Doctor\+List.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}-\/>\mbox{\hyperlink{classSystem_aa6e30aadd4e7c06a101d59e4fce4dcb3}{showMedicsList}}(\mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{system}}-\/>\mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{getDb}}());}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSystem_ab6af39b8be221a46dc837711f9e42680}{System\+::get\+Db()}}, \mbox{\hyperlink{classSystem_aa6e30aadd4e7c06a101d59e4fce4dcb3}{System\+::show\+Medics\+List()}}, and \mbox{\hyperlink{classCommand_a4d6b418344eda87f3ba12aeff4984320}{Command\+::system}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classViewDoctorList_a85f18d08c4134d6d12e4cd163fbbccd5_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ViewDoctorList_8h}{View\+Doctor\+List.\+h}}\end{DoxyCompactItemize}

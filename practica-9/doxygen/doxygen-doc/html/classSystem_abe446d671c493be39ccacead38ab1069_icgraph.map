@@ -1,0 +1,5 @@
+<map id="System::createMedic" name="System::createMedic">
+<area shape="rect" id="Node000001" title="Asigna una especialidad a un médico." alt="" coords="228,13,387,38"/>
+<area shape="rect" id="Node000002" href="$classMakeDoctorCommand.html#acc94bc67b904c0964d5234bd0bcc1e48" title="Método de ejecución del comando." alt="" coords="5,5,180,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
